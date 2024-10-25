@@ -27,7 +27,7 @@ const UserTable = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await fetch("http://localhost:5001/user");
+            const response = await fetch("https://server-7oyv.onrender.com/user");
             const data = await response.json();
             setUsers(data.users);
         } catch (error) {
@@ -38,7 +38,7 @@ const UserTable = () => {
     const deleteUser = async (userId) => {
         if (window.confirm('Are you sure you want to delete this user?')) {
             try {
-                const response = await fetch(`http://localhost:5001/user/${userId}`, { method: 'DELETE' });
+                const response = await fetch(`https://server-7oyv.onrender.com/user/${userId}`, { method: 'DELETE' });
                 if (response.ok) {
                     fetchUsers();
                 } else {
@@ -53,7 +53,7 @@ const UserTable = () => {
 
     const handleAddUser = async () => {
         try {
-            const response = await fetch("http://localhost:5001/user/register", {
+            const response = await fetch("https://server-7oyv.onrender.com/user/register", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ const UserTable = () => {
 
     const handleUpdateUser = async () => {
         try {
-            const response = await fetch(`http://localhost:5001/user/${currentUserId}`, {
+            const response = await fetch(`https://server-7oyv.onrender.com/user/${currentUserId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
