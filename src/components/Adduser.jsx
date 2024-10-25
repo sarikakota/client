@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, Container } from 'react-bootstrap';
 
-const apiUrl = "http://localhost:5001/user/register";
+const apiUrl = "https://server-7oyv.onrender.com/user/register";
 
 const AddUser = () => {
     const [formData, setFormData] = useState({
