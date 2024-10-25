@@ -20,7 +20,7 @@ const EditUser = () => {
 
     const fetchUser = async () => {
         try {
-            const response = await fetch(`http://localhost:5001/user/${id}`);
+            const response = await fetch(`https://server-7oyv.onrender.com/user/${id}`);
             const data = await response.json();
             setUser(data);
         } catch (error) {
@@ -30,7 +30,7 @@ const EditUser = () => {
 
     const handleUpdateUser = async () => {
         try {
-            const response = await fetch(`http://localhost:5001/user/${id}`, {
+            const response = await fetch(`https://server-7oyv.onrender.com/user/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
